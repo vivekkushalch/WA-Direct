@@ -1,10 +1,10 @@
 //service worker check
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register('sw.js').then(swRegistration => {
-        console.log("ServiceWorker(sw.js) is Registered Sucessfully!");
+        console.log("SW is Registered Sucessfully!");
         console.log(swRegistration)
     }).catch(err => {
-        console.log("ServiceWorker(sw.js) is Registration Failed :(")
+        console.log("SW Registration Failed :(")
         console.log(err)
     })
 }
@@ -60,7 +60,7 @@ shareAppBtn.addEventListener("click", function() {
     try {
         navigator.share({
             title: 'WA-Direct',
-            text: siteDesc ,
+            text: siteDesc,
             url: document.location.href
         });
     } catch (err) {
@@ -79,7 +79,7 @@ copyLinkBtn.addEventListener("click", function() {
         navigator.clipboard.writeText(waChatLink);
         alert("Link Copied!")
     }
-    
+
 })
 
 
@@ -90,6 +90,7 @@ let deferredPrompt;
 window.addEventListener('beforeinstallprompt', (e) => {
     // e.preventDefault();
     deferredPrompt = e;
+
 });
 installPWABtn.addEventListener('click', async() => {
     if (deferredPrompt !== null) {
@@ -103,6 +104,6 @@ installPWABtn.addEventListener('click', async() => {
 
 
 //refresh page
-document.querySelector('.header-container').addEventListener("click",function(){
+document.querySelector('.header-container').addEventListener("click", function() {
     location.reload();
 })
