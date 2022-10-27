@@ -1,0 +1,304 @@
+/* 
+
+1. globals
+2. header
+3. input group
+4. call to action btn
+5. feature buttons
+6. footer
+7. media queries
+
+ */
+
+
+
+/***********************/
+/* globals */
+/***********************/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'MuktaVaani';
+    src: url('../assets/MuktaVaani-Regular.ttf') format('truetype');
+}
+
+body {
+    background-color: #172830;
+    background-image: url("../assets/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'MuktaVaani';
+    min-height: 100%;
+    min-width: 100%;
+}
+
+#github-icon {
+    height: 2rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 25rem;
+    min-width: 100%;
+}
+
+
+
+
+
+/***********************/
+/* header items */
+/***********************/
+
+
+
+
+.header-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 0.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+#wadirect-icon {
+    width: 3.5rem;
+    grid-column: 1/2;
+    float: left;
+    margin-top: 5px;
+}
+
+.icon-txt-wrapper {
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-items: end;
+    margin-right: 0.5rem;
+}
+
+#icon-header {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+#icon-desc {
+    font-size: 0.75rem;
+    margin-top: -1rem;
+}
+
+
+
+
+/***********************/
+/* input group */
+/***********************/
+
+
+
+
+.input-grp-container {
+    margin-top: 2.3rem;
+    display: grid;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-items: center;
+}
+
+.numeric-input-wrapper {
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 0;
+    padding: 0;
+    max-width: 20rem;
+    justify-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+#code-input {
+    max-width: 1.8rem;
+    height: 1rem;
+    grid-column: 1;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 13px;
+    color: #25D366;
+    background-color: #2C373D;
+    border-radius: 50px 0 0 50px;
+    border-right: 1px solid #1a9748;
+}
+
+#mobile-num-input {
+    grid-column: 2;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 13px;
+    color: #25D366;
+    background-color: #2C373D;
+    max-width: 10rem;
+    height: 1rem;
+    border-radius: 0 50px 50px 0;
+    border-left: 1px solid #1a9748;
+}
+
+.message-textarea {
+    grid-row: 2;
+    margin-top: 1.3rem;
+    text-decoration: none;
+    background-color: #2C373D;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    font-family: "MuktaVaani";
+    font-size: 1.1rem;
+    font-weight: 450;
+    line-height: 1.5rem;
+    min-width: 12.5rem;
+    height: 3rem;
+}
+
+
+
+/***********************/
+/* call to action */
+/***********************/
+
+
+
+.call-to-action-btn {
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 0;
+    margin: auto;
+    margin-top: 1.5rem;
+    background-color: #1fb656;
+    border-radius: 50px;
+    width: 10.1rem;
+    padding: 9px;
+    padding-left: 1px;
+    padding-right: 1px;
+    cursor: pointer;
+}
+
+.call-to-action-btn img {
+    width: 2rem;
+    margin-left: 14px;
+}
+
+.call-to-action-btn p {
+    font-family: "MuktaVaani";
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 0;
+    margin-left: -17px;
+    color: white;
+}
+
+
+
+/***********************/
+/* feature buttons  */
+/***********************/
+
+
+.feature-btns-wrapper {
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.feature-btns-wrapper img {
+    height: 4rem;
+    margin: 1.45rem;
+    cursor: pointer;
+}
+
+#share-app-btn {
+    margin-left: 0.5rem;
+}
+
+#share-app-btn:focus {
+    outline: none;
+}
+*:focus {
+    outline: 1px solid #1fb656;
+}
+
+
+
+/***********************/
+/* footer */
+/***********************/
+
+
+
+#footer {
+    width: 100%;
+    text-decoration:none;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    margin: auto;
+}
+
+#footer span {
+    color: #1fb656;
+}
+#footer:focus{
+    outline:none
+}
+
+
+
+/***********************/
+/* media queries */
+/***********************/
+
+
+/* for input focus and soft keyboard activate ---------------- */
+
+@media screen and (max-height:500px) {
+    .feature-btns-wrapper {
+        display: none;
+    }
+    #footer {
+        display: none;
+    }
+}
+
+
+/* Large screens ----------- */
+
+@media only screen and (min-width: 1080px) {
+    body {
+        background: #172830;
+        overflow: hidden;
+    }
+    .wrapper {
+        min-width: 20rem;
+        min-height: 100%;
+        padding-top: 5rem;
+        justify-content: center;
+        background-image: url("../assets/background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
