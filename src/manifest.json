@@ -3,7 +3,7 @@
     "background_color": "#03141E",
     "display": "standalone",
     "scope": "/",
-    "start_url": "https://vivekkushalch.github.io/WA-Direct/",
+    "start_url": "/",
     "name": "WhatsApp Direct!",
     "short_name": "WA-Direct!",
     "description": "WhatsApp anyone on the fly! | No Contacts Required!",
