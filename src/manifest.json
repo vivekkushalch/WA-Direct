@@ -3,7 +3,7 @@
     "background_color": "#03141E",
     "display": "standalone",
     "scope": "/",
-    "start_url": "/",
+    "start_url": "/WA-Direct/",
     "name": "WhatsApp Direct!",
     "short_name": "WA-Direct!",
     "description": "WhatsApp anyone on the fly! | No Contacts Required!",
